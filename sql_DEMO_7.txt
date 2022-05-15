@@ -1,0 +1,11 @@
+select *
+    website_sessions_id,
+    pageview_url
+    COUNT(distinct website_sessions_id) AS sessions,
+    COUNT(distinct orders.orders_id) AS orders
+FROM website_pageviews
+WHERE created_at between '2012-02-01' AND '2013-03-01'
+      AND pageview_url IN ('/the-original-mr-fuzzy'
+GROUP BY 1;
+
+
